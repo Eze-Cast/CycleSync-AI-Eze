@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Geolocalización | CycleSync AI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">QUANTUM<span>BYTE</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="technology.html">Tecnología</a></li>
+            <li><a href="map.html">Puntos de Acopio</a></li>
+            <li><a href="demo.html">Live Demo</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1 class="title-neon">Red de Valorización</h1>
+        
+        <div class="map-layout">
+            <div class="locations-list">
+                <div class="zone-panel">
+                    <h4 style="color: var(--secondary); margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 10px;">ESTADO DE ZONA: BAJÍO</h4>
+                    <div class="zone-stat">
+                        <span>Nodos Activos:</span>
+                        <strong style="color: #0f0;">3 ONLINE</strong>
+                    </div>
+                    <div class="zone-stat">
+                        <span>Logística:</span>
+                        <strong>En Ruta</strong>
+                    </div>
+                    <div class="zone-stat">
+                        <span>Saturación:</span>
+                        <strong style="color: orange;">42%</strong>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 30px; margin-bottom: 15px; color: var(--primary);">Seleccionar Nodo</h3>
+                
+                <div class="loc-item" onclick="focusMap(21.125, -101.68, 'Planta Volkswagen')">
+                    <strong>Planta Volkswagen</strong><br>
+                    <span class="desc">ID: VW-SIL-01 | Puerto Interior</span>
+                </div>
+                
+                <div class="loc-item" onclick="focusMap(21.116, -101.65, 'Recicladora del Bajío')">
+                    <strong>Recicladora del Bajío</strong><br>
+                    <span class="desc">ID: RCB-LEO-04 | Zona Norte</span>
+                </div>
+                
+                <div class="loc-item" onclick="focusMap(21.150, -101.70, 'Eco-Electrónica')">
+                    <strong>Eco-Electrónica</strong><br>
+                    <span class="desc">ID: ECO-MOR-09 | E-Waste</span>
+                </div>
+            </div>
+            
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

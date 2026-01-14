@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo | CycleSync AI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">QUANTUM<span>BYTE</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="technology.html">Tecnología</a></li>
+            <li><a href="map.html">Puntos de Acopio</a></li>
+            <li><a href="demo.html">Live Demo</a></li>
+        </ul>
+    </nav>
+
+    <div class="container" style="text-align: center;">
+        <h1 class="title-neon">Motor de Inferencia</h1>
+        <p style="color:#aaa; margin-bottom: 40px;">Simulación de entorno operativo Android con TensorFlow Lite.</p>
+
+        <div class="scanner-ui">
+            <div class="scan-window">
+                <div class="scan-laser" id="laser" style="display: none;"></div>
+                <div id="camera-placeholder">
+                    <i class="fa-solid fa-camera fa-3x" style="color: #444;"></i>
+                    <p style="color: #444; margin-top: 10px;">Cámara en Espera</p>
+                </div>
+                <img id="scanned-img" src="" style="width: 100%; height: 100%; object-fit: cover; display: none;">
+            </div>
+            
+            <div class="scanner-controls">
+                <div style="text-align: left;">
+                    <h3 id="res-title" style="color: #fff;">Sistema Listo</h3>
+                    <p id="res-conf" style="color: #888; font-size: 0.9rem;">Esperando objeto...</p>
+                </div>
+                <button class="btn-main" onclick="runSimulation()">ESCANEAR</button>
+            </div>
+        </div>
+
+        <div class="log-container">
+            <h3 class="log-title"><i class="fa-solid fa-list"></i> Bitácora de Eventos (Tiempo Real)</h3>
+            <div class="table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Hora</th>
+                            <th>ID Evento</th>
+                            <th>Material</th>
+                            <th>Confianza</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="log-body">
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
